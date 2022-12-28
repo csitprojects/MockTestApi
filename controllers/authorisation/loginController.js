@@ -8,7 +8,7 @@ dotenv.config();
 // @desc    Login user and return JWT token
 // @access  Public
 
-export function Login(req, res){
+export default  function Login(req, res){
   const { email, password } = req.body;
 
   // Find the user by email

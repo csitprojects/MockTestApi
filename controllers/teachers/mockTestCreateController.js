@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import Exam from "../../models/Exam";
 
   
-export async function mockTestCreate(req, res){
+export default  async function mockTestCreate(req, res){
     try {
       // Check if the user is a teacher
       if (req.user.role !== 'teacher') {

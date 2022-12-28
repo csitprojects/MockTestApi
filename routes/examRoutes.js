@@ -5,11 +5,11 @@ const router  = express.Router();
 
 //imports for chapters
 import examsList from '../controllers/exams/examsController'
-import examsById from '../controllers/exams/examsByIdController'
-import subjectList from '../controller/exams/subjectListController'
-import subjectById from '../controller/exams/subjectByIdController'
+import examsById from '../controllers/exams/examByIdController'
+import subjectList from '../controllers/exams/subjectListController'
+import subjectById from '../controllers/exams/subjectByIdController'
 import chapterList from "../controllers/exams/chapterListController"
-import  chapterById from '../controllers/exams/chapterById'
+import  chapterById from '../controllers/exams/chapterByIdController'
 
 //imports for mock-tests
 import mocktestList from '../controllers/mock-tests/mocktestListController'
@@ -18,20 +18,20 @@ import mocktestSubmit from '../controllers/mock-tests/mocktestSubmitController'
 import mocktestResult from '../controllers/mock-tests/mocktestResultController'  
 import mocktestLeaderBoard from '../controllers/mock-tests/mocktestLeaderBoardController'
 //upto chapter routes
-router.get('/exams', examsList);
-router.get('/exams/:examId', examsById)
-router.get('/exams/:examId/subjects', subjectList)
-router.get('/exams/:examId/subjects/:subjectId', subjectById)
-router.get('/exams/:examId/subjects/:subjectId/chapters',chapterList)  
-router.get('/exams/:examId/subjects/:subjectId/chapters/:chapterId', chapterById) 
+router.get('/', examsList);
+router.get('/:examId', examsById)
+router.get('/:examId/subjects', subjectList)
+router.get('/:examId/subjects/:subjectId', subjectById)
+router.get('/:examId/subjects/:subjectId/chapters',chapterList)  
+router.get('/:examId/subjects/:subjectId/chapters/:chapterId', chapterById) 
 
 
 //mocktests routes
-router.get('/exams/:examId/subjects/:subjectId/chapters/:chapterId/mock-tests',  mocktestList) 
-router.get('/exams/:examId/subjects/:subjectId/chapters/:chapterId/mock-tests/:mocktestId', mocktestById) 
-router.get('/exams/:examId/subjects/:subjectId/chapters/:chapterId/mock-tests/:mocktestId/submit', mocktestSubmit) 
-router.get('/exams/:examId/subjects/:subjectId/chapters/:chapterId/mock-tests/:mocktestId/result', mocktestResult) 
-router.get('/exams/:examId/subjects/:subjectId/chapters/:chapterId/mock-tests/:mocktestId/leaderboard', mocktestLeaderBoard) 
+router.get('/:examId/subjects/:subjectId/chapters/:chapterId/mock-tests',  mocktestList) 
+router.get('/:examId/subjects/:subjectId/chapters/:chapterId/mock-tests/:mocktestId', mocktestById) 
+router.get('/:examId/subjects/:subjectId/chapters/:chapterId/mock-tests/:mocktestId/submit', mocktestSubmit) 
+router.get('/:examId/subjects/:subjectId/chapters/:chapterId/mock-tests/:mocktestId/result', mocktestResult) 
+router.get('/:examId/subjects/:subjectId/chapters/:chapterId/mock-tests/:mocktestId/leaderboard', mocktestLeaderBoard) 
 
 //payment
 //router.post('/:examId/subjects/:subjectId/chapters/:chapterId/mock-tests/:mockTestId/purchase',mockPurchase)

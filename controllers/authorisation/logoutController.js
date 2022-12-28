@@ -1,6 +1,6 @@
 
 
-export function Logout(req, res){
+export default function Logout(req, res){
   // Clear the user from the session
   req.logout();
 

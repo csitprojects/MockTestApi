@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import Exam from "../../models/Exam";
 
 
-export async function examsById(req, res){
+export default async function examsById(req, res){
     try {
       // Find the exam by ID
       const exam = await Exam.findById(req.params.examId);

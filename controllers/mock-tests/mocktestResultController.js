@@ -2,7 +2,7 @@
 import mongoose from "mongoose";
 import Exam from "../../models/Exam";
 
-export async function mocktestResult(req, res){
+export default async function mocktestResult(req, res){
   try {
     const examId = req.params.examId;
     const subjectId = req.params.subjectId;

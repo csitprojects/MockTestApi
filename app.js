@@ -3,9 +3,9 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import passport from 'passport';
+//import passport from 'passport';
 import connectDB from './config/database';
-import authRoutes from './routes/auth';
+import authRoutes from './routes/authRoutes';
 import teacherRoutes from './routes/teacherRoutes';
 import examRoutes from './routes/examRoutes';
 import paymentRoutes from './routes/paymentRoutes';
@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Initialize passport middleware
-app.use(passport.initialize());
+//app.use(passport.initialize());
 
 // Use the auth routes
 app.use('/api/auth', authRoutes);

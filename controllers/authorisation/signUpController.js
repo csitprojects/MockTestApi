@@ -2,7 +2,7 @@ const passport = require('passport');
 const User = require('../../models/User');
 
 
- export function SignUp(req, res){
+ export default function SignUp(req, res){
   // Create a new user
   const newUser = new User({
     name: req.body.name,

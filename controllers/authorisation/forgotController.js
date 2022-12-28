@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
 import User from '../../models/User';
 
-export async function Forgot(req, res) {
+export default async function Forgot(req, res) {
   try {
     // Find the user by email
     const user = await User.findOne({ email: req.body.email });

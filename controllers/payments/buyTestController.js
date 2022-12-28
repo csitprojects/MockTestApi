@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import Exam from "../../models/Exam";
 import User from "../../models/User";
 
-  export async function buyTest(req, res){
+  export default  async function buyTest(req, res){
     try {
       // Check if the user is a student
       if (req.user.role !== 'student') {

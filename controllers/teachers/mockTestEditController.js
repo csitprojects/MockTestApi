@@ -3,7 +3,7 @@ import Exam from "../../models/Exam";
 
 
 
-export async function mockTestEdit(req, res){
+export default async function mockTestEdit(req, res){
     try {
         // Check if the user is a teacher
         if (req.user.role !== 'teacher') {

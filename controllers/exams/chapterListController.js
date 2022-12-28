@@ -1,7 +1,7 @@
 import Exam from "../../models/Exam";
 import mongoose from "mongoose";
 
-export async function chapterList(req, res){
+export default async function chapterList(req, res){
     try {
       const examId = req.params.examId;
       const subjectId = req.params.subjectId;

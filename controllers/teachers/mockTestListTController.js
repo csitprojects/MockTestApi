@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import Exam from "../../models/Exam";
-export async function mockTestListT(req, res){
+export default async function mockTestListT(req, res){
     try {
       // Find all exams in the database
       const exams = await Exam.find({});

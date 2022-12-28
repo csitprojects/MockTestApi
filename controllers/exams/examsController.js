@@ -3,7 +3,7 @@ import Exam from "../../models/Exam";
 // GET route for retrieving a list of exams
 
 
-export async function examsList(req, res) {
+export default async function examsList(req, res) {
     try {
         // Find all exams in the database
         const exams = await Exam.find();
