@@ -1,11 +1,9 @@
-
-const mongoose = require('mongoose');
-
-// Load the Exam model
-const Exam = mongoose.model('Exam');
-
+import mongoose from "mongoose";
+import Exam from "../../models/Exam";
 // GET route for retrieving a list of exams
-exports.examsList = async (req, res) => {
+
+
+export async function examsList(req, res) {
     try {
         // Find all exams in the database
         const exams = await Exam.find();

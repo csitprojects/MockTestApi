@@ -1,7 +1,7 @@
-const nodemailer = require('nodemailer');
-const User = require('../models/User');
+import nodemailer from 'nodemailer';
+import User from '../../models/User';
 
-exports.Forgot =  async (req, res) => {
+export async function Forgot(req, res) {
   try {
     // Find the user by email
     const user = await User.findOne({ email: req.body.email });

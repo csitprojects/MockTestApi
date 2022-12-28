@@ -1,11 +1,8 @@
 
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
+import Exam from "../../models/Exam";
 
-// Load the Exam model
-const Exam = mongoose.model('Exam');
-
-
-exports.leaderBoard = async (req, res) => {
+export async function leaderBoard(req, res){
   try {
     // Find the exam by ID
     const exam = await Exam.findById(req.params.examId);

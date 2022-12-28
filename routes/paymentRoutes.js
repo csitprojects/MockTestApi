@@ -1,7 +1,7 @@
-const express = require('express');
+import express from "express";
 const router = express.Router();
-const purchasesController = require('../controller/payments/purchasesController')
-const buyTestController = require('../controller/payments/buyTestController')
+import purchaseList from '../controller/payments/purchasesController'
+import buyTest from '../controller/payments/buyTestController'
 
-router.get('/students/:studentId/purchases', purchasesController.purchaseList)
-router.post('/students/:studentId/purchases/:mockTestId/buy', buyTestController.buyTest)
+router.get('/students/:studentId/purchases', purchaseList)
+router.post('/students/:studentId/purchases/:mockTestId/buy', buyTest)

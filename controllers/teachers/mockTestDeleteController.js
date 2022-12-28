@@ -1,11 +1,7 @@
+import mongoose from "mongoose";
+import Exam from "../../models/Exam";
 
-const mongoose = require('mongoose');
-
-
-// Load the Exam model
-const Exam = mongoose.model('Exam');
-
-exports.mocktestDelete =  async (req, res) => {
+export async function mocktestDelete(req, res){
     try {
       // Check if the user is a teacher
       if (req.user.role !== 'teacher') {

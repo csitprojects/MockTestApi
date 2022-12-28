@@ -1,8 +1,6 @@
-
-const mongoose = require('mongoose');
-// Load the Exam model
-const Exam = mongoose.model('Exam');
-exports.mockTestListT = async (req, res) => {
+import mongoose from "mongoose";
+import Exam from "../../models/Exam";
+export async function mockTestListT(req, res){
     try {
       // Find all exams in the database
       const exams = await Exam.find({});

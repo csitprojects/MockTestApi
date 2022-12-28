@@ -1,8 +1,7 @@
+import Exam from "../../models/Exam";
+import mongoose from "mongoose";
 
-const Exam = require('../../models/Exam');
-
-
-exports.chapterList = async (req, res) => {
+export async function chapterList(req, res){
     try {
       const examId = req.params.examId;
       const subjectId = req.params.subjectId;

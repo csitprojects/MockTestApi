@@ -1,10 +1,7 @@
+import mongoose from "mongoose";
+import Exam from "../../models/Exam";
 
-const mongoose = require('mongoose');
-
-// Load the Exam model
-const Exam = mongoose.model('Exam');
-
-exports.mocktestSubmit =  async (req, res) => {
+export async function mocktestSubmit(req, res){
   try {
     // Find the exam by ID
     const exam = await Exam.findById(req.params.examId);

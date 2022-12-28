@@ -1,14 +1,8 @@
+import mongoose from "mongoose";
+import Exam from "../../models/Exam";
+import User from "../../models/User";
 
-const mongoose = require('mongoose');
-
-
-// Load the Exam model
-const Exam = mongoose.model('Exam');
-
-// Load the User model
-const User = mongoose.model('User');
-
-  exports.buyTest =  async (req, res) => {
+  export async function buyTest(req, res){
     try {
       // Check if the user is a student
       if (req.user.role !== 'student') {

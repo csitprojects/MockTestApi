@@ -1,7 +1,8 @@
 
-const Exam = require('../models/exam');
+import mongoose from "mongoose";
+import Exam from "../../models/Exam";
 
-exports.getResult =  async (req, res) => {
+export async function mocktestResult(req, res){
   try {
     const examId = req.params.examId;
     const subjectId = req.params.subjectId;

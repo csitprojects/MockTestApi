@@ -1,14 +1,14 @@
 
-const passport = require('passport');
-const jwt = require('jsonwebtoken');
-const User = require('../models/User');
-require('dotenv').config();
+import jwt from "jsonwebtoken";
+import User from "../../models/User";
+import dotenv from "dotenv";
+dotenv.config();
 
 // @route   POST api/auth/login
 // @desc    Login user and return JWT token
 // @access  Public
 
-exports.Login = (req, res) => {
+export function Login(req, res){
   const { email, password } = req.body;
 
   // Find the user by email

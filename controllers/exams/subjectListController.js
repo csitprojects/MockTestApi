@@ -1,12 +1,8 @@
-const express = require('express');
-const router = express.Router();
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
+import Exam from "../../models/Exam";
 
 
-const Exam = mongoose.model('Exam');
-
-
-exports.subjectList = async (req, res) => {
+export async function subjectList(req, res){
     try {
       // Find the exam by ID
       const exam = await Exam.findById(req.params.examId);

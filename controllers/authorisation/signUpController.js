@@ -1,8 +1,8 @@
 const passport = require('passport');
-const User = require('../models/User');
+const User = require('../../models/User');
 
 
- exports.SignUp = (req, res) => {
+ export function SignUp(req, res){
   // Create a new user
   const newUser = new User({
     name: req.body.name,

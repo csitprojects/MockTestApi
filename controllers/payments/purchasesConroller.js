@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const User = mongoose.model('User');
 
 
-exports.purchaseList =  async (req, res) => {
+export async function purchaseList(req, res){
     try {
       // Check if the user is a student
       if (req.user.role !== 'student') {

@@ -1,6 +1,6 @@
 
 
-exports.Logout = (req, res) => {
+export function Logout(req, res){
   // Clear the user from the session
   req.logout();
 
@@ -8,4 +8,3 @@ exports.Logout = (req, res) => {
   res.redirect('/login');
 };
 
-module.exports = router;

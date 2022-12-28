@@ -1,10 +1,8 @@
 
-const mongoose = require('mongoose');
+import Exam from "../../models/Exam";
+import mongoose from "mongoose";
 
-const Exam = mongoose.model('Exam')
-
-
-exports.subjectGet = async (req, res) => {
+export async function subjectById(req, res){
     try {
       // Find the exam by ID
       const exam = await Exam.findById(req.params.examId);
